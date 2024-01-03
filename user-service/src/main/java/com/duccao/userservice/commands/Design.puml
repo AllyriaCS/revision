@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Command<R> {
+}
+note top of Command:Marked interface for command with R is the return result after execute.
+
+interface CommandHandler<R, C> {
+    R handle(C command)
+}
+note top of CommandHandler: Handler for a specific command with R is the return result and C is the command.
+
+interface CommandBus {
+    <R, C extends Command<R>> R execute(C command)
+}
+note top of CommandBus: This component responsible for executing command by passing down the Command object to the appropriate handler.
+
+class CommandRegistry {
+ - Map<Class<? extends Command>, CommandHandler> commands = new HashMap<>()
+
+}
+note right of CommandRegistry: Registry holds the mapping between a command and its handler.
+
+class SpringCommandBus {
+ - CommandRegistry registry
+ --
+ + <R, C extends Command<R>> R execute(C command)
+}
+class SpringCommandBus implements CommandBus
+SpringCommandBus *- CommandRegistry
+
+@enduml
