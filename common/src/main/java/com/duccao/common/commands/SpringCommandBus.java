@@ -1,7 +1,7 @@
-package com.duccao.userservice.commands;
+package com.duccao.common.commands;
 
 /**
- * Description of the class goes here.
+ * The spring boot specific command bus.
  *
  * @author Duc Cao
  * @version 1.0

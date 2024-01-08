@@ -15,7 +15,7 @@ public class ApplicationContextUtil implements ApplicationContextAware {
 
   @Override
   public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-    this.context = applicationContext;
+    context = applicationContext;
   }
 
   public static <T> T getSpringBean(final String name, final Class<T> type) {

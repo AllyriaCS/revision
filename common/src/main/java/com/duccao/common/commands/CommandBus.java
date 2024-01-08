@@ -1,7 +1,7 @@
-package com.duccao.userservice.commands;
+package com.duccao.common.commands;
 
 /**
- * Finds and delegate the execution to appropriate command handler.
+ * This component responsible for executing command by passing down the Command object to the appropriate handler.
  *
  * @author Duc Cao
  * @version 1.0

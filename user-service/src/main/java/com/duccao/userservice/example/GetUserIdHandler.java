@@ -1,6 +1,6 @@
 package com.duccao.userservice.example;
 
-import com.duccao.userservice.commands.CommandHandler;
+import com.duccao.common.commands.CommandHandler;
 import com.duccao.userservice.exceptions.BusinessError;
 import com.duccao.userservice.exceptions.BusinessException;
 import java.util.Optional;
@@ -29,6 +29,6 @@ public class GetUserIdHandler implements CommandHandler<UserResponse, GetUserByI
     if (userOptional.isEmpty()) {
       throw new BusinessException(BusinessError.ENTITY_NOT_FOUND);
     }
-    return UserResponse.mapFromEntity(userOptional.get());
+    return UserResponse.fromEntity(userOptional.get());
   }
 }

@@ -1,7 +1,7 @@
-package com.duccao.userservice.commands;
+package com.duccao.common.commands;
 
 /**
- * Handler command.
+ * Handler for a specific command with R is the return result and C is the command.
  *
  * @author Duc Cao
  * @version 1.0

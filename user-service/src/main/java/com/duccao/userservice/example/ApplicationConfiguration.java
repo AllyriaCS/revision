@@ -1,8 +1,8 @@
 package com.duccao.userservice.example;
 
-import com.duccao.userservice.commands.CommandBus;
-import com.duccao.userservice.commands.CommandRegistry;
-import com.duccao.userservice.commands.SpringCommandBus;
+import com.duccao.common.commands.CommandBus;
+import com.duccao.common.commands.CommandRegistry;
+import com.duccao.common.commands.SpringCommandBus;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,3 +22,4 @@ public class ApplicationConfiguration {
     return new SpringCommandBus(new CommandRegistry(applicationContext));
   }
 }
+

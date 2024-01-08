@@ -1,6 +1,6 @@
 package com.duccao.userservice.example;
 
-import com.duccao.userservice.commands.CommandBus;
+import com.duccao.common.commands.CommandBus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

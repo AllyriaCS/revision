@@ -1,4 +1,4 @@
-package com.duccao.userservice.commands;
+package com.duccao.common.commands;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.core.GenericTypeResolver;
 
 /**
- * Description of the class goes here.
+ * Registry holds the mapping between a command and its handler.
  *
  * @author Duc Cao
  * @version 1.0
@@ -15,7 +15,6 @@ import org.springframework.core.GenericTypeResolver;
 public class CommandRegistry {
 
   private final Map<Class<? extends Command<?>>, CommandHandler<?, ? extends Command<?>>> registry = new HashMap<>();
-
 
   public CommandRegistry(ApplicationContext applicationContext) {
     Map<String, CommandHandler> handlers = applicationContext.getBeansOfType(CommandHandler.class);

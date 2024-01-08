@@ -1,4 +1,4 @@
-package com.duccao.userservice.commands;
+package com.duccao.common.commands;
 
 /**
  * The masked interface for commands.

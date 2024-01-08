@@ -1,6 +1,6 @@
 package com.duccao.userservice.example;
 
-import com.duccao.userservice.commands.Command;
+import com.duccao.common.commands.Command;
 import java.io.Serializable;
 
 /**
